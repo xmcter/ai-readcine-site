@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- 深底圆角方，在亮/暗两种浏览器标签栏下都清晰 -->
+  <rect width="32" height="32" rx="7" fill="#14181f"/>
+  <!-- 信号 ping：中心信标 + 两圈向外扩散的同心环（越外越淡），暖橙 -->
+  <circle cx="16" cy="16" r="10.5" fill="none" stroke="#e08a45" stroke-width="2" opacity=".38"/>
+  <circle cx="16" cy="16" r="6"    fill="none" stroke="#e08a45" stroke-width="2" opacity=".7"/>
+  <circle cx="16" cy="16" r="2.6"  fill="#e08a45"/>
+</svg>

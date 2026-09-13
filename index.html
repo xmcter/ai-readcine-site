@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 情报站</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link rel="stylesheet" href="style.css?v=10">
+</head>
+<body>
+<div class="shell">
+  <div id="ptr-indicator" aria-live="polite"></div>
+  <div class="wrap">
+    <header class="masthead" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom: 24px;">
+      <div>
+        <h1 style="margin:0;">AI 情报站</h1>
+      </div>
+      <button id="open-settings-btn" class="settings-trigger-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px;"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        自定义订阅
+      </button>
+    </header>
+    <div class="audience-bar" id="audience-bar" role="group" aria-label="岗位频道">
+      <span class="audience-label">岗位</span>
+      <button type="button" class="audience-chip active" data-audience="开发">开发</button>
+      <button type="button" class="audience-chip active" data-audience="产品">产品</button>
+      <button type="button" class="audience-chip active" data-audience="通用">通用</button>
+    </div>
+    <div class="feed-timeline" id="feed-container">
+      <div class="loading-state">正在加载雷达数据...</div>
+    </div>
+    <footer class="mini-footer">
+      <span>最后更新：<b id="last-fetch-time">-</b></span>
+    </footer>
+    <div id="detail-modal" class="modal-overlay">
+      <div class="modal-card">
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+        <div class="modal-body" id="modal-body-content"></div>
+      </div>
+    </div>
+    <div id="settings-modal" class="modal-overlay">
+      <div class="modal-card">
+        <button class="modal-close" id="settings-close-btn">&times;</button>
+        <div class="modal-body">
+          <h2 class="modal-title">自定义订阅源</h2>
+          <p style="font-size:12.5px; color:var(--ink-dim); margin:-12px 0 20px 0; line-height:1.5;">
+            点击频道徽章以“点亮/取消”订阅。定制您专属的每日情报时间线（设置自动保存在本地）。
+          </p>
+          <div style="display:flex; gap:8px; margin-bottom:20px;">
+            <button class="modal-action-btn" style="padding:6px 12px; font-size:12px; width:auto; margin:0;" onclick="subscribeAll(true)">全部订阅</button>
+            <button class="modal-action-btn" style="padding:6px 12px; font-size:12px; width:auto; margin:0; background:transparent; color:var(--ink); border-color:var(--line);" onclick="subscribeAll(false)">取消全选</button>
+          </div>
+          <div id="settings-list" class="settings-list-container"></div>
+          <div id="settings-hover-info" class="settings-hover-info">鼠标悬停于任一频道上以查看其追踪内容...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<noscript><p style="padding:20px;font-family:sans-serif;">本页依赖 JavaScript 加载 data.json 渲染内容，请在浏览器中启用 JavaScript。</p></noscript>
+<script src="app.js?v=10" defer></script>
+<script>
+  const CHIP_LABELS = { major: '重大', feature: '新功能', fix: '修复', breaking: '破坏性变更', quota: '额度', unverified: '待核实' };
+  function localizeChipNode(el) {
+    if (!el || !el.classList || !el.classList.contains('chip')) return;
+    if (el.classList.contains('chip-audience')) return;
+    const cls = [...el.classList].find(c => CHIP_LABELS[c]);
+    if (cls) el.textContent = CHIP_LABELS[cls];
+    else {
+      const key = (el.textContent || '').trim().toLowerCase();
+      if (CHIP_LABELS[key]) el.textContent = CHIP_LABELS[key];
+    }
+  }
+  function localizeAllChips(root) {
+    (root || document).querySelectorAll('.chip').forEach(localizeChipNode);
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    localizeAllChips();
+    new MutationObserver(muts => {
+      for (const m of muts) {
+        for (const n of m.addedNodes) {
+          if (n.nodeType !== 1) continue;
+          if (n.classList && n.classList.contains('chip')) localizeChipNode(n);
+          else localizeAllChips(n);
+        }
+      }
+    }).observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+</body>
+</html>
