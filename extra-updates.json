@@ -1,0 +1,27 @@
+{
+  "last_fetch": "2026-09-15",
+  "items": [
+    {
+      "panelId": "xai",
+      "subgroupTitle": "Grok Bot",
+      "row": {
+        "when": "2026-09-05",
+        "title": "Grok Bot 官方重置全体用量上限",
+        "desc": "Grok Bot（@bot）宣布 We've reset usage limits for all Grok Bot users。马斯克转发「Grok @Bot usage limits reset」。9月1日免费 token 重置之后的第二次。",
+        "detail": "这是**用量/代币重置**，不是技能重置、不是人格回滚。部分用户几小时内看到额度恢复，也有人反馈 SuperGrok 或个别 bot 没有马上变化。官方未公布具体 token 数。",
+        "type_chips": [{"text": "额度", "class": "quota"}]
+      }
+    },
+    {
+      "panelId": "xai",
+      "subgroupTitle": "Grok Bot",
+      "row": {
+        "when": "2026-09-01",
+        "title": "马斯克再给全体 Grok / Bot 用户免费 token 重置",
+        "desc": "马斯克：We’re giving all @Grok @Bot users another free reset on token usage。8 月 Grok 4.6 发布时也曾重置限额。",
+        "detail": "官方口径是 token usage 免费重置，用来推迟按量限制或升级提示。社区反馈不一：有人当天到账，有人要等数小时，有人说 SuperGrok 未刷新。同日马斯克还说会上线自动 token 优化以降低 Grok Bot 成本。",
+        "type_chips": [{"text": "额度", "class": "quota"}]
+      }
+    }
+  ]
+}
