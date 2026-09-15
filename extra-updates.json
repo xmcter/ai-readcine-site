@@ -2,13 +2,123 @@
   "last_fetch": "2026-09-15",
   "items": [
     {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-15",
+        "title": "Cline Desktop 0.0.28：独立桌面端继续迭代，同日 CLI 3.0.62",
+        "desc": "Cline 桌面端 desktop-v0.0.28 与 CLI v3.0.62、扩展 v4.1.18 同日发布。桌面端把同一套 agent harness 从编辑器拿出来，面向开源权重与本地模型。",
+        "detail": "官方定位是给不整天待在 IDE 里的人用的开源工作区：并行 session、定时任务、Marketplace / MCP / Skills，可从 Claude Code、Codex 接续任务。Mac 开源，Windows 仍是 beta。不把这一条写成「Cline 替代 Cursor」。",
+        "type_chips": [{"text": "工具", "class": "product"}]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-15",
+        "title": "Anthropic 公布自家 agent 如何限制爆炸半径",
+        "desc": "安全向文章讲清楚：agent 能干什么、干不了什么、出轨后怎么收。同日还有开源权重被剔掉安全训练后上架出售的报道。",
+        "detail": "这是安全机制说明，不是新模型发布。与「剔安全权重商品化」并列出现，只记官方写了什么，不推测市场结果。",
+        "type_chips": [{"text": "安全", "class": "safety"}]
+      }
+    },
+    {
+      "panelId": "openai",
+      "subgroupTitle": "ChatGPT",
+      "row": {
+        "when": "2026-09-15",
+        "title": "iOS 27 代码显示 Siri 可换 Claude 或 ChatGPT 作后端",
+        "desc": "社区从 iOS 27 构建里读出 Siri 可切换 Claude / ChatGPT 作对话后端。苹果尚未发布说明。",
+        "detail": "只记代码里看到的接口名，不当成已经上架。没有公开的价格、默认厂商或上线日期。",
+        "type_chips": [{"text": "平台", "class": "product"}]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-15",
+        "title": "GitHub Actions 接入编程 agent；开源权重被剔安全后上架出售",
+        "desc": "两条并列：仓库里的编程 agent 走进 CI；另有商业服务把开源权重的安全对齐去掉再卖。",
+        "detail": "前者是工作流变化，后者是安全边界变化。不把两条拼成「开源已死」。",
+        "type_chips": [{"text": "行业", "class": "industry"}]
+      }
+    },
+    {
+      "panelId": "google",
+      "subgroupTitle": "Antigravity 2.0",
+      "row": {
+        "when": "2026-09-14",
+        "title": "Antigravity 预览上下文从 128k 提到 1M",
+        "desc": "Google 把两档 Antigravity preview 的上下文窗从 128k 提到 1M。",
+        "detail": "只记窗口变化。不涉及定价、不涉及模型更名。",
+        "type_chips": [{"text": "窗口", "class": "model"}]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-14",
+        "title": "Claude for Financial Advisors：对接 BlackRock / Schwab 等托管",
+        "desc": "Anthropic 推出给投顾的 Claude 插件：研究、会议准备、组合分析、合规核对，带 BlackRock、Schwab、Addepar 等连接器。",
+        "detail": "Enterprise / RIA 通道。这是行业插件，不是新基座模型。",
+        "type_chips": [{"text": "产品", "class": "product"}]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-14",
+        "title": "Anthropic Economic Index：约 100 万条对话映到 O*NET 任务",
+        "desc": "首份报告：37.2% 查询落在计算机与数学类工作；增强 57%，替代 43%。",
+        "detail": "样本是 Claude.ai Free / Pro 匿名对话。不把这组比例当成全行业结论。",
+        "type_chips": [{"text": "研究", "class": "research"}]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-14",
+        "title": "ElevenLabs MCP 接入语音 / 图像 / 视频生成",
+        "desc": "MCP 连接器把语音、转写、配音、音乐、音效、图像、视频给到 Claude、ChatGPT、Cursor、Grok Bot 等客户端。",
+        "detail": "OAuth，工作区管理员控制工具与数据属地。这是工具面向变化，不是新基座模型。",
+        "type_chips": [{"text": "工具", "class": "product"}]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-14",
+        "title": "Amodei 呼吁拓展实验室放慢；Altman、马斯克表态支持",
+        "desc": "Anthropic CEO 说要 pace the frontier。OpenAI、xAI 主带回应支持这一句。同日马斯克仍在拆 Grok 4.8 / 5。",
+        "detail": "记态度，不记成「三家已经停训」。没有公开的共同时间表。",
+        "type_chips": [{"text": "政策", "class": "industry"}]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-14",
+        "title": "DeepSeek V4 Pro API 没有按原计切到 Flash",
+        "desc": "9 月 10 日曾说要把 deepseek-v4-pro 别名切到 V4.1-Flash 费率。黑 14 日仍按 V4-Pro-0813 计费。",
+        "detail": "只记计费与别名。不解读成新模型发布。",
+        "type_chips": [{"text": "API", "class": "model"}]
+      }
+    },
+    {
       "panelId": "xai",
       "subgroupTitle": "Grok Bot",
       "row": {
         "when": "2026-09-14",
         "title": "马斯克拆 Grok 4.8 / 4.9 / 5：4.8 本周结束训练进 RL",
         "desc": "Grok 4.8 为 2.5T，新 C++ 训练栈，本周结束训练后进 RL。4.7 被评为大致对齐 Opus 5.0 而非 5.1；4.9 定位 Astra/Fable；问 AGI 则指向 Grok 5。",
-        "detail": "来源是马斯克 9 月 14 日 X 回帖，xAI 官网当时没有同步发布说明。Grok 4.7 原定 9 月 12 日交付，截至 9 月 14 日仍未上架。他说 4.7 「有些地方更好，有些更差」，多模态还要补。4.8 「明显好一点」，5 「maybe better than anything」。",
+        "detail": "来源是马斯克 9 月 14 日 X 回帖，xAI 官网当时没有同步发布说明。线上最新正式模型仍是 8 月 12 日的 Grok 4.6。",
         "type_chips": [{"text": "路线", "class": "model"}]
       }
     },
@@ -18,8 +128,8 @@
       "row": {
         "when": "2026-09-13",
         "title": "Grok 4.7 超过 9/12 窗口，仍未发布",
-        "desc": "马斯克先前说 4.7 要再多几天。截至 9 月 13 日，xAI 模型页与 API 发布说明里仍没有 Grok 4.7。最新在线仍是 8 月 12 日的 Grok 4.6。",
-        "detail": "社区侧写的原因是 RL 可能罚了回答长度。这是推测，不是 xAI 官方发布说明。",
+        "desc": "截至 9 月 13 日，xAI 模型页与 API 发布说明里仍没有 Grok 4.7。",
+        "detail": "社区侧写的原因是 RL 可能罚了回答长度。这是推测。",
         "type_chips": [{"text": "延误", "class": "model"}]
       }
     },
@@ -29,8 +139,8 @@
       "row": {
         "when": "2026-09-05",
         "title": "Grok Bot 官方重置全体用量上限",
-        "desc": "Grok Bot（@bot）宣布 We've reset usage limits for all Grok Bot users。马斯克转发「Grok @Bot usage limits reset」。",
-        "detail": "这是**用量/代币重置**，不是技能重置。",
+        "desc": "We've reset usage limits for all Grok Bot users。",
+        "detail": "用量/代币重置，不是技能重置。",
         "type_chips": [{"text": "额度", "class": "quota"}]
       }
     },
@@ -40,7 +150,7 @@
       "row": {
         "when": "2026-09-01",
         "title": "马斯克再给全体 Grok / Bot 用户免费 token 重置",
-        "desc": "马斯克：We’re giving all @Grok @Bot users another free reset on token usage。",
+        "desc": "another free reset on token usage。",
         "detail": "官方口径是 token usage 免费重置。",
         "type_chips": [{"text": "额度", "class": "quota"}]
       }
