@@ -3,6 +3,28 @@
   "items": [
     {
       "panelId": "xai",
+      "subgroupTitle": "Grok",
+      "row": {
+        "when": "2026-09-14",
+        "title": "马斯克拆 Grok 4.8 / 4.9 / 5：4.8 本周结束训练进 RL",
+        "desc": "Grok 4.8 为 2.5T，新 C++ 训练栈，本周结束训练后进 RL。4.7 被评为大致对齐 Opus 5.0 而非 5.1；4.9 定位 Astra/Fable；问 AGI 则指向 Grok 5。",
+        "detail": "来源是马斯克 9 月 14 日 X 回帖，xAI 官网当时没有同步发布说明。Grok 4.7 原定 9 月 12 日交付，截至 9 月 14 日仍未上架。他说 4.7 「有些地方更好，有些更差」，多模态还要补。4.8 「明显好一点」，5 「maybe better than anything」。",
+        "type_chips": [{"text": "路线", "class": "model"}]
+      }
+    },
+    {
+      "panelId": "xai",
+      "subgroupTitle": "Grok",
+      "row": {
+        "when": "2026-09-13",
+        "title": "Grok 4.7 超过 9/12 窗口，仍未发布",
+        "desc": "马斯克先前说 4.7 要再多几天。截至 9 月 13 日，xAI 模型页与 API 发布说明里仍没有 Grok 4.7。最新在线仍是 8 月 12 日的 Grok 4.6。",
+        "detail": "社区侧写的原因是 RL 可能罚了回答长度，模型遇难题过早收手。这是推测，不是 xAI 官方发布说明。",
+        "type_chips": [{"text": "延误", "class": "model"}]
+      }
+    },
+    {
+      "panelId": "xai",
       "subgroupTitle": "Grok Bot",
       "row": {
         "when": "2026-09-05",
@@ -19,7 +41,7 @@
         "when": "2026-09-01",
         "title": "马斯克再给全体 Grok / Bot 用户免费 token 重置",
         "desc": "马斯克：We’re giving all @Grok @Bot users another free reset on token usage。8 月 Grok 4.6 发布时也曾重置限额。",
-        "detail": "官方口径是 token usage 免费重置，用来推迟按量限制或升级提示。社区反馈不一：有人当天到账，有人要等数小时，有人说 SuperGrok 未刷新。同日马斯克还说会上线自动 token 优化以降低 Grok Bot 成本。",
+        "detail": "官方口径是 token usage 免费重置。社区反馈不一：有人当天到账，有人要等数小时。",
         "type_chips": [{"text": "额度", "class": "quota"}]
       }
     }
