@@ -3,7 +3,7 @@
   "items": [
     {
       "panelId": "xai",
-      "subgroupTitle": "Grok",
+      "subgroupTitle": "Grok Bot",
       "row": {
         "when": "2026-09-14",
         "title": "马斯克拆 Grok 4.8 / 4.9 / 5：4.8 本周结束训练进 RL",
@@ -14,12 +14,12 @@
     },
     {
       "panelId": "xai",
-      "subgroupTitle": "Grok",
+      "subgroupTitle": "Grok Bot",
       "row": {
         "when": "2026-09-13",
         "title": "Grok 4.7 超过 9/12 窗口，仍未发布",
         "desc": "马斯克先前说 4.7 要再多几天。截至 9 月 13 日，xAI 模型页与 API 发布说明里仍没有 Grok 4.7。最新在线仍是 8 月 12 日的 Grok 4.6。",
-        "detail": "社区侧写的原因是 RL 可能罚了回答长度，模型遇难题过早收手。这是推测，不是 xAI 官方发布说明。",
+        "detail": "社区侧写的原因是 RL 可能罚了回答长度。这是推测，不是 xAI 官方发布说明。",
         "type_chips": [{"text": "延误", "class": "model"}]
       }
     },
@@ -29,8 +29,8 @@
       "row": {
         "when": "2026-09-05",
         "title": "Grok Bot 官方重置全体用量上限",
-        "desc": "Grok Bot（@bot）宣布 We've reset usage limits for all Grok Bot users。马斯克转发「Grok @Bot usage limits reset」。9月1日免费 token 重置之后的第二次。",
-        "detail": "这是**用量/代币重置**，不是技能重置、不是人格回滚。部分用户几小时内看到额度恢复，也有人反馈 SuperGrok 或个别 bot 没有马上变化。官方未公布具体 token 数。",
+        "desc": "Grok Bot（@bot）宣布 We've reset usage limits for all Grok Bot users。马斯克转发「Grok @Bot usage limits reset」。",
+        "detail": "这是**用量/代币重置**，不是技能重置。",
         "type_chips": [{"text": "额度", "class": "quota"}]
       }
     },
@@ -40,8 +40,8 @@
       "row": {
         "when": "2026-09-01",
         "title": "马斯克再给全体 Grok / Bot 用户免费 token 重置",
-        "desc": "马斯克：We’re giving all @Grok @Bot users another free reset on token usage。8 月 Grok 4.6 发布时也曾重置限额。",
-        "detail": "官方口径是 token usage 免费重置。社区反馈不一：有人当天到账，有人要等数小时。",
+        "desc": "马斯克：We’re giving all @Grok @Bot users another free reset on token usage。",
+        "detail": "官方口径是 token usage 免费重置。",
         "type_chips": [{"text": "额度", "class": "quota"}]
       }
     }
