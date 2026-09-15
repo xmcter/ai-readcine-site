@@ -13,11 +13,14 @@
       } catch (e) {}
       for (const item of extra.items || []) {
         const panel = (data.vendors && data.vendors.panels || []).find(function (x) { return x.id === item.panelId; });
-        if (!panel) continue;
-        const sg = (panel.subgroups || []).find(function (s) { return s.title === item.subgroupTitle; });
-        if (!sg || !item.row) continue;
+        if (!panel || !item.row) continue;
+        let sg = (panel.subgroups || []).find(function (s) { return s.title === item.subgroupTitle; });
+        if (!sg) sg = (panel.subgroups || []).find(function (s) { return s.title === 'Grok Bot'; });
+        if (!sg) sg = (panel.subgroups || [])[0];
+        if (!sg) continue;
+        sg.rows = sg.rows || [];
         const titles = {};
-        (sg.rows || []).forEach(function (r) { titles[r.title] = 1; });
+        sg.rows.forEach(function (r) { titles[r.title] = 1; });
         if (!titles[item.row.title]) sg.rows.unshift(item.row);
       }
       if (extra.last_fetch && data.meta) data.meta.last_fetch = extra.last_fetch;
