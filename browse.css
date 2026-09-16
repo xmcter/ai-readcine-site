@@ -1,0 +1,11 @@
+.resume-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.resume-bar[hidden]{display:none!important}
+.resume-link,.resume-next{border:1px solid var(--line);background:var(--card,transparent);color:var(--ink-dim);border-radius:999px;padding:6px 12px;font-size:12px;cursor:pointer;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.resume-next{color:var(--accent,#c9a227)}
+.feed-card.is-read{opacity:.62}
+.feed-item.is-resume .feed-card{outline:1px solid color-mix(in srgb, var(--accent,#c9a227) 50%, transparent)}
+.detail-pager{display:flex;gap:8px;margin:12px 0 8px}
+.pager-btn{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:4px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:transparent;color:var(--ink);cursor:pointer;text-align:left}
+.pager-btn strong{font-size:12px}
+.pager-btn span{font-size:12px;color:var(--ink-dim);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pager-btn.is-disabled{opacity:.45;cursor:default}
