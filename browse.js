@@ -47,7 +47,6 @@
     const i = rows.findIndex(x => x.id === last);
     if (!last || i < 0) { bar.hidden = true; return; }
     const cur = rows[i];
-    const next = rows[i + 1];
     bar.hidden = false;
     bar.innerHTML = '';
     const a = document.createElement('button');
@@ -59,15 +58,6 @@
       if (el) el.scrollIntoView({ block: 'center', behavior: 'smooth' });
     };
     bar.appendChild(a);
-    if (next && typeof openDetail === 'function') {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'resume-next';
-      const read = isClicked(next.id);
-      b.textContent = (read ? '下一篇已读 · ' : '下一篇未读 · ') + (next.title || next.desc || '');
-      b.onclick = () => openDetail(next.id);
-      bar.appendChild(b);
-    }
   }
 
   function paintList() {
@@ -102,14 +92,12 @@
     pager = document.createElement('div');
     pager.id = 'detailPager';
     pager.className = 'detail-pager';
-    pager.innerHTML = '<button type="button" class="pager-btn" id="btnPrevUpdate"><strong>上一篇</strong><span id="prevUpdateHint"></span></button><button type="button" class="pager-btn" id="btnNextUpdate"><strong>下一篇</strong><span id="nextUpdateHint"></span></button>';
-    body.parentNode.insertBefore(pager, body);
-    function jump(btn) {
-      const id = btn && btn.dataset.id;
+    pager.innerHTML = '<button type="button" class="pager-btn" id="btnNextUpdate"><strong>下一篇</strong><span id="nextUpdateHint"></span></button>';
+    body.appendChild(pager);
+    pager.querySelector('#btnNextUpdate').addEventListener('click', e => {
+      const id = e.currentTarget.dataset.id;
       if (id && typeof openDetail === 'function') openDetail(id);
-    }
-    pager.querySelector('#btnPrevUpdate').addEventListener('click', e => jump(e.currentTarget));
-    pager.querySelector('#btnNextUpdate').addEventListener('click', e => jump(e.currentTarget));
+    });
     return pager;
   }
 
@@ -118,25 +106,19 @@
     if (!pager) return;
     const rows = visibleItems();
     const i = rows.findIndex(x => x.id === id);
-    function fill(btnId, hintId, item, label) {
-      const btn = document.getElementById(btnId);
-      const hint = document.getElementById(hintId);
-      if (!btn) return;
-      if (!item) {
-        btn.disabled = true;
-        btn.classList.add('is-disabled');
-        btn.dataset.id = '';
-        if (hint) hint.textContent = '没有了';
-        return;
-      }
-      btn.disabled = false;
-      btn.classList.remove('is-disabled');
-      btn.dataset.id = item.id;
-      if (hint) hint.textContent = (isClicked(item.id) ? '已读 · ' : '未读 · ') + (item.title || item.desc || '');
+    const next = i >= 0 ? rows[i + 1] : null;
+    const btn = document.getElementById('btnNextUpdate');
+    const hint = document.getElementById('nextUpdateHint');
+    if (!btn) return;
+    if (!next) {
+      pager.hidden = true;
+      return;
     }
-    fill('btnPrevUpdate', 'prevUpdateHint', i > 0 ? rows[i - 1] : null, '上一篇');
-    fill('btnNextUpdate', 'nextUpdateHint', i >= 0 ? rows[i + 1] : null, '下一篇');
     pager.hidden = false;
+    btn.disabled = false;
+    btn.classList.remove('is-disabled');
+    btn.dataset.id = next.id;
+    if (hint) hint.textContent = (isClicked(next.id) ? '已读 · ' : '未读 · ') + (next.title || next.desc || '');
   }
 
   function wrap() {
