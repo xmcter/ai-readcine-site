@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ai.readcine.com/
+Sitemap: https://ai.readcine.com/sitemap.xml
