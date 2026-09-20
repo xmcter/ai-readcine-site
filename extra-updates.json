@@ -1,6 +1,390 @@
 {
-  "last_fetch": "2026-09-15",
+  "last_fetch": "2026-09-20",
   "items": [
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-20",
+        "title": "路透：Anthropic 评估发布新模型，以回应 GPT-6 Astra 压力",
+        "desc": "知情人士称 Anthropic 在考虑推新模型对冲 OpenAI GPT-6 Astra 的企业端势能，时点紧挨其 CEO 呼吁行业放缓之后。",
+        "detail": "路透系报道（约 2026-09-20）：强调仍属审议、非官宣发版。Altman 同周末称 OpenAI 2026 不上市。只记「在评估」，不写成已发布。",
+        "type_chips": [
+          {
+            "text": "行业",
+            "class": "product"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "google",
+      "subgroupTitle": "Antigravity CLI",
+      "row": {
+        "when": "2026-09-19",
+        "title": "Antigravity CLI v1.2.7 发布：新增 LaTeX 和 Mermaid 图形渲染",
+        "desc": "v1.2.7: 新版本在 Artifact 详细查看器中新增了对 LaTeX 数学公式和 Mermaid 流程图的 inline Kitty 图形渲染，支持 Unicode ASCII 降级。同时改进了 `ask_question` 交互式提示，增强了企业账户的 CLI 启动横幅显示，并优化了模型 API 重试响应速度和自定义 token 预算分配。",
+        "detail": "Antigravity CLI v1.2.7 带来了多项功能增强和优化。最显著的是，它现在支持在 Artifact 详细查看器中渲染 LaTeX 数学公式和 Mermaid 图形（如流程图和序列图），并提供了 Kitty 图形渲染、ASCII 回退和多视图切换功能，极大地提升了内容的可视化效果。交互式问答体验也得到了改进，允许用户在问题间导航、预览确认答案并快速提交。针对企业用户，CLI 启动横幅会显示活跃的 Google Cloud Project ID。此外，模型 API 的重试机制更加智能，减少了等待时间；自定义 token 预算现在有专属的 20,000 token 预算，避免大型规则集挤占其他资源。最后，一些遗留工具（`find_by_name`, `grep_search`, `list_dir`）已从默认工具集中移除，但仍可供自定义 Agent 使用。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "command_code",
+      "subgroupTitle": "Command Code",
+      "row": {
+        "when": "2026-09-19",
+        "title": "Command Code CLI v1.57.0 发布：macOS/Windows/Linux/WSL 支持粘贴剪贴板图像",
+        "desc": "v1.57.0: Command Code CLI 新版本支持在 macOS、Windows、Linux 和 WSL 上使用 `ctrl+v` 或 `alt+v` 粘贴剪贴板图像。",
+        "detail": "Command Code CLI v1.57.0 带来了跨平台粘贴剪贴板图像的功能，用户现在可以在 macOS、Windows、Linux 和 WSL 环境下，通过常用的 `ctrl+v` 或新增的 `alt+v` 快捷键，将剪贴板中的图像直接粘贴到应用中。这一功能极大地提升了用户在不同操作系统和子系统之间处理图像的便捷性，简化了工作流程。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-19",
+        "title": "美加州北区诉讼：指 OpenAI / Anthropic / Google / xAI 协同「慢速」开发",
+        "desc": "付费订阅用户起诉四家公司，称其就放缓 AI 能力迭代达成协同，涉嫌反垄断并损害订阅价值。",
+        "detail": "Fortune 等报道（立案约 2026-09-19）：诉状把 9/12 Amodei 公开呼吁与 Altman / Musk / Hassabis 公开回应串成证据链。此为原告主张，尚未裁决；只记诉讼事实，不预判结果。",
+        "type_chips": [
+          {
+            "text": "监管",
+            "class": "safety"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "openai",
+      "subgroupTitle": "Codex",
+      "row": {
+        "when": "2026-09-18",
+        "title": "Codex CLI 0.155.1 发布：修复推理摘要默认禁用问题",
+        "desc": "v0.155.1: 新版本修复了新本地 TUI 会话默认禁用推理摘要的问题，解决了不支持该功能的提供商可能拒绝请求的情况；显式设置的推理摘要设置仍然受尊重。",
+        "detail": "Codex CLI 在 0.155.1 版本中解决了本地 TUI（文本用户界面）会话中推理摘要（reasoning summaries）默认被禁用的问题。此前，如果提供商不支持推理摘要，可能会导致请求被拒绝。更新后，默认行为已恢复，但用户仍可根据需要显式配置推理摘要设置，以确保兼容性和灵活性。",
+        "type_chips": [
+          {
+            "text": "fix",
+            "class": "fix"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "google",
+      "subgroupTitle": "Antigravity 2.0",
+      "row": {
+        "when": "2026-09-18",
+        "title": "Antigravity 2.15.0 发布：增强自定义 Agent 控制与键盘导航",
+        "desc": "Antigravity 2.15.0 允许自定义 Agent 禁用默认提示和工具，并记住用户选择的 Agent；优化了会话切换速度，并新增 Page Up/Down、Home/End、Escape 等键盘导航功能；同时修复了多项设置和会话状态问题。",
+        "detail": "此版本的主要亮点在于对自定义 Agent 的精细控制能力，开发者现在可以更灵活地配置 Agent 的行为，移除不必要的默认功能，提升 Agent 的专业性。键盘导航的增强（Page Up/Down, Home/End, Escape 键支持）将大幅提升用户在长对话中的效率和体验。此外，修复了设置和会话状态的问题，确保了应用程序的稳定性和可靠性，避免了数据丢失或配置混乱的情况。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "anthropic",
+      "subgroupTitle": "Claude API/Models",
+      "row": {
+        "when": "2026-09-18",
+        "title": "Claude Platform 推出 Compliance API 跨平台会话转录功能",
+        "desc": "Compliance API 本地会话端点现在支持返回 Claude in Chrome 会话的转录，供 Claude Enterprise 组织测试。",
+        "detail": "Claude Platform 的 Compliance API 增强了会话转录能力，其本地会话端点（Local Session Endpoints）现可在测试阶段为 Claude Enterprise 组织返回 Claude in Chrome 会话的转录数据。这项功能通过现有的 Compliance Access Key 和 `read:compliance_user_data` 权限范围启用，使得企业用户能够更好地监控和审计跨平台的用户交互，确保合规性。此更新扩展了企业对用户数据使用的可见性和控制力。",
+        "type_chips": [
+          {
+            "text": "更新",
+            "class": "product"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "github_ms",
+      "subgroupTitle": "GitHub Copilot",
+      "row": {
+        "when": "2026-09-18",
+        "title": "GitHub Copilot 部分模型将于 10 月中旬弃用",
+        "desc": "GitHub Copilot 宣布将于 10 月中旬弃用部分模型，建议用户关注相关通知并做好迁移准备。",
+        "detail": "GitHub Copilot 计划在 10 月中旬弃用其部分模型。此举可能旨在整合模型架构、优化性能或淘汰旧版功能。受影响的用户应及时查阅官方公告，了解具体受影响的模型列表和建议的迁移路径，以确保其工作流不受影响。此类弃用通常是产品演进的一部分，以提供更优质的服务。",
+        "type_chips": [
+          {
+            "text": "breaking",
+            "class": "breaking"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "command_code",
+      "subgroupTitle": "Command Code",
+      "row": {
+        "when": "2026-09-18",
+        "title": "Command Code CLI v1.56.0 发布：新增 Qwen 3.8 Omni Flash 模型",
+        "desc": "v1.56.0: Command Code CLI 新版本增加了对 Qwen 3.8 Omni Flash 模型的支持。",
+        "detail": "Command Code CLI v1.56.0 集成了 Qwen 3.8 Omni Flash 模型。这一更新为用户提供了更多高性能的 AI 模型选择，Qwen 3.8 Omni Flash 可能具备更快的推理速度和更强的泛化能力，从而提升代码生成、理解和辅助编程的效率和质量。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "anthropic",
+      "subgroupTitle": "Claude Code",
+      "row": {
+        "when": "2026-09-18",
+        "title": "Claude Code 2.1.277：找不到 CLAUDE.md 时回退读 AGENTS.md",
+        "desc": "CLI 首次接受非自有指令格式：无 CLAUDE.md 时回退 AGENTS.md；同版本附带大量稳定性修复（含 -p / Agent SDK 出错退出）。",
+        "detail": "社区 changelog 摘要（2026-09-18）：CLAUDE.md 仍优先；另含网关代理边界变量与空 text block 导致会话失败等问题修复。可用 claude --version 核对 2.1.277。",
+        "type_chips": [
+          {
+            "text": "CLI",
+            "class": "product"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-18",
+        "title": "加州加速 AI 安全框架：研讨前沿模型「紧急关停」机制",
+        "desc": "州长行政令推动专家组强化州级 AI 安全与独立监督，评估是否要求可验证的紧急关停（kill switch）。",
+        "detail": "媒体报道衔接到 9 月中旬行政令与第三方评估立法。同期有 Gemini 在安全测评中误触真实公司系统的披露，被用作加强监管的案例材料。",
+        "type_chips": [
+          {
+            "text": "监管",
+            "class": "safety"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "xai",
+      "subgroupTitle": "Grok Bot",
+      "row": {
+        "when": "2026-09-17",
+        "title": "Grok Bot Android 客户端发布更新：修复语音聊天音频问题并优化性能",
+        "desc": "此次更新主要修复了语音聊天的音频路由问题，并提升了语音处理性能，旨在改善安卓用户在移动设备上的语音交互体验。",
+        "detail": "Grok Bot Android 客户端的此版本更新致力于优化其核心的语音交互功能。修复音频路由问题意味着用户在使用语音聊天时将获得更稳定、清晰的声音传输，避免中断或混淆。同时，音频处理性能的提升将使语音识别和生成更加流畅和迅速，为用户带来更自然、高效的沟通体验，尤其是在多任务或复杂对话场景下。",
+        "type_chips": [
+          {
+            "text": "fix",
+            "class": "fix"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "openai",
+      "subgroupTitle": "Codex",
+      "row": {
+        "when": "2026-09-17",
+        "title": "Codex CLI 0.155.0 发布：新增实时语音对话与 Touch ID 验证",
+        "desc": "v0.155.0: 新版本引入了实验性实时 WebRTC 语音对话功能，支持麦克风控制；TUI 界面现在显示实时推理摘要和成功回合后的完成时间戳。此外，新增了在受支持的 Mac 设备上使用 Touch ID 验证 MCP 请求的功能，并优化了任务管理和守护程序更新机制。",
+        "detail": "Codex CLI 0.155.0 版本带来了多项重要更新，包括实验性的实时语音对话功能，允许用户通过麦克风进行交互。TUI 得到了增强，能够实时显示 Agent 的思考过程摘要和每个成功操作的时间戳，提升了用户对 Agent 工作状态的感知。此外，新版本在支持的 macOS 设备上引入了 Touch ID 验证功能，显著提高了 MCP（多计算协议）请求的安全性。其他改进包括任务隐藏、归档和删除功能，以及可配置的守护程序更新计划，确保了稳定性和可恢复性。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "openai",
+      "subgroupTitle": "ChatGPT",
+      "row": {
+        "when": "2026-09-17",
+        "title": "ChatGPT API 平台访问现支持 SCIM 管理",
+        "desc": "租户范围的 SCIM 现已支持 API 平台，企业和教育版全局管理员可通过管理控制台分配同步群组至 API 组织和选定项目，无需邀请即可获取访问权限。",
+        "detail": "OpenAI API 平台现在集成了租户范围的 SCIM（System for Cross-domain Identity Management）支持。这意味着企业和教育版客户的全局管理员可以通过其身份提供商（如 Okta, Azure AD）同步用户群组，并直接将这些群组分配给 API 组织和特定项目。成员无需接受单独邀请即可获得访问权限，简化了大规模用户管理流程，并确保 API 访问权限与身份提供商中的群组分配保持同步。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "openai",
+      "subgroupTitle": "ChatGPT",
+      "row": {
+        "when": "2026-09-17",
+        "title": "ChatGPT 现已集成至 Microsoft Word，赋能文档创作与编辑",
+        "desc": "ChatGPT 正式登陆 Microsoft Word，用户可在侧边栏直接草拟文本、总结文档、修订选定内容以及调整标题和格式。此功能支持所有 ChatGPT 计划，并会消耗对应计划的 token 额度。",
+        "detail": "通过将 ChatGPT 集成到 Microsoft Word，OpenAI 极大地扩展了其 AI 助手的应用场景，使其能够直接在文档创作的核心工作流中发挥作用。这意味着用户可以在不离开 Word 界面的情况下，利用 AI 进行内容生成、信息摘要和格式优化，显著提高文档处理效率。企业版和教育版用户还将拥有更灵活的管理权限和按量计费选项，便于大型组织部署和控制成本。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-17",
+        "title": "OpenAI 推出 Astra for Law：专为法律行业打造的 AI 服务",
+        "desc": "OpenAI 宣布推出 Astra for Law，这是一项专为法律行业设计的 AI 服务。该服务旨在帮助法律专业人士处理复杂的法律任务，提升效率。",
+        "detail": "Astra for Law 的推出标志着 OpenAI 进一步将 AI 技术细化并应用于特定垂直领域。对于法律行业而言，AI 可以极大辅助合同审查、案例研究、文档起草和法律信息检索，从而提高律师和法律顾问的工作效率，减少重复性劳动。这项服务可能包含了针对法律文本理解、生成和分析优化的特定模型，以满足法律领域的严谨性和专业性要求。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "opensource_agents",
+      "subgroupTitle": "Cline",
+      "row": {
+        "when": "2026-09-17",
+        "title": "Cline Desktop v0.0.32 发布：修复更新后启动失败问题",
+        "desc": "v0.0.32: 新版本修复了 0.0.31 版本更新后应用启动失败的问题，此前因 Hub 与应用身份不匹配导致无法启动。现在 Cline Hub 和应用共享同一份代码，并在 CI 中进行端到端测试，确保两者不再出现版本漂移。",
+        "detail": "Cline Desktop v0.0.32 解决了此前版本更新后应用程序无法启动的严重问题。在 v0.0.31 中，由于 Cline Hub 和应用的核心代码构建自不同副本，导致 Hub 发布了与应用预期不符的构建身份，应用启动时会关闭刚启动的 Hub 并报错“桌面后端在发布其端点前退出”。新版本通过确保 Hub 和应用加载相同副本的代码，并在 CI/CD 流程中对编译后的后端进行端到端启动测试，彻底解决了版本漂移问题，提升了更新的可靠性。",
+        "type_chips": [
+          {
+            "text": "fix",
+            "class": "fix"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "command_code",
+      "subgroupTitle": "Command Code",
+      "row": {
+        "when": "2026-09-17",
+        "title": "Command Code CLI v1.55.0 发布：新增 /loop 命令与 OpenAI Responses 端点",
+        "desc": "v1.55.0: Command Code CLI 新版本新增 `/loop` 命令，支持按固定或自定进度重复运行任务。同时，提供商 API 和 BYOK CLI Wire 上新增 OpenAI Responses 端点。",
+        "detail": "Command Code CLI v1.55.0 引入了两个主要新功能。首先，新增了 `/loop` 命令，允许用户立即运行一个任务，并按固定时间表或自定进度重复执行，从而实现了任务的自动化和持续运行。其次，在提供商 API 和 BYOK（Bring Your Own Key）CLI Wire 上新增了 OpenAI Responses 端点，这为开发者提供了通过 API 访问 OpenAI Responses 功能的途径，增强了 Command Code 与 OpenAI 服务的集成能力。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "anthropic",
+      "subgroupTitle": "Claude Code",
+      "row": {
+        "when": "2026-09-17",
+        "title": "Claude Code 重启 Projects：云端多 Agent 协同（Beta）",
+        "desc": "Anthropic 为 Claude Code 重启 Projects：同一项目下多条 thread 并行，配 coordinator 与共享记忆/文件库；每条 thread 是独立云端会话与分支。",
+        "detail": "The Verge（2026-09-17）报道：冲突按 PR merge 处理；本地工具支持「很快」到来。今日起对部分 Claude Pro / Max 开放 Beta，随后扩至 Team / Enterprise，并计划进入 Cowork 与普通 Claude 对话。",
+        "type_chips": [
+          {
+            "text": "产品",
+            "class": "product"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "xai",
+      "subgroupTitle": "Grok CLI",
+      "row": {
+        "when": "2026-09-16",
+        "title": "Grok Build 1.0.34 发布：Memory 功能普遍可用，Markdown 标题支持主题色",
+        "desc": "v1.0.34: Grok Build 的 Memory 功能现在普遍可用，所有用户均可访问。同时，Markdown 标题现在能够正确显示主题颜色。",
+        "detail": "Grok Build 1.0.34 版本带来了两项重要更新。首先，此前处于测试阶段的 Memory 功能现已普遍可用（Generally Available），这意味着所有用户都可以利用其持久化上下文和学习能力，提升 Agent 的长期工作效率。其次，新版本修复了 Markdown 标题在应用中无法正确应用主题颜色的问题，确保了界面的一致性和美观性。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "industry",
+      "subgroupTitle": "AI 行业要闻",
+      "row": {
+        "when": "2026-09-16",
+        "title": "OpenAI 发布模型错位报告框架，提升 AI 系统安全性与透明度",
+        "desc": "OpenAI 推出了一套新的模型错位报告框架，旨在提高 AI 系统的安全性、可解释性和透明度，帮助识别并解决模型行为与预期目标不一致的问题。",
+        "detail": "模型错位（model misalignment）是指 AI 系统的行为偏离开发者或用户预期目标的现象。OpenAI 的新框架提供了系统化的方法来报告和分析这类问题，这对于构建更安全、更可靠的 AI 至关重要。通过提升对模型行为的理解和控制，该框架有助于减少潜在的风险，并促进 AI 伦理和治理的进一步发展，确保 AI 系统能够更好地服务于人类利益。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "github_ms",
+      "subgroupTitle": "GitHub Copilot",
+      "row": {
+        "when": "2026-09-16",
+        "title": "Copilot 预算增加请求已普遍可用",
+        "desc": "Copilot 的预算增加请求功能现已普遍可用，允许用户更灵活地管理其使用额度。",
+        "detail": "GitHub Copilot 的预算增加请求功能现在已向所有用户普遍开放。这意味着当用户的 Copilot 使用量达到预设限制时，可以方便地提交请求以增加预算。此功能提升了用户在管理 AI 辅助编码资源方面的灵活性，确保大型项目或高强度开发工作能够顺畅进行，避免因预算限制而中断。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "command_code",
+      "subgroupTitle": "Command Code",
+      "row": {
+        "when": "2026-09-16",
+        "title": "Command Code Desktop v0.1.30：工作区与侧栏大改版",
+        "desc": "桌面端重建侧栏、会话流、Changes/Files/Terminal/Browser/Plan 等侧面板，并加入技能市场、MCP 设置与 /rewind 检查点。",
+        "detail": "官方 changelog 将桌面端工作区重做为响应式侧栏 + composer + 会话流；侧面板支持 Changes 行级 diff、文件树、终端分屏（Cmd/Ctrl+J）、模型收藏与推理档位轮盘、上下文用量环、Todos、拖拽附件、并发多项目会话，以及 Settings 内技能市场与 MCP 登录/API Key。",
+        "type_chips": [
+          {
+            "text": "feature",
+            "class": "feature"
+          }
+        ]
+      }
+    },
+    {
+      "panelId": "xai",
+      "subgroupTitle": "Grok CLI",
+      "row": {
+        "when": "2026-09-16",
+        "title": "xAI 官方：Grok Build Memory 跨会话记忆上线",
+        "desc": "Grok Build 在后台记录约定、决策与项目事实，新会话自动读回；提供 /memory、/dream、/flush、/remember。",
+        "detail": "来源 x.ai/news/grok-build-memory（2026-09-16）：捕获在回合结束后异步进行；/dream 会把笔记整理成主题文件。需 /new 或新开 grok 会话后生效。",
+        "type_chips": [
+          {
+            "text": "功能",
+            "class": "product"
+          }
+        ]
+      }
+    },
     {
       "panelId": "industry",
       "subgroupTitle": "AI 行业要闻",
@@ -9,7 +393,12 @@
         "title": "Cline Desktop 0.0.28：独立桌面端继续迭代，同日 CLI 3.0.62",
         "desc": "Cline 桌面端 desktop-v0.0.28 与 CLI v3.0.62、扩展 v4.1.18 同日发布。桌面端把同一套 agent harness 从编辑器拿出来，面向开源权重与本地模型。",
         "detail": "官方定位是给不整天待在 IDE 里的人用的开源工作区：并行 session、定时任务、Marketplace / MCP / Skills，可从 Claude Code、Codex 接续任务。Mac 开源，Windows 仍是 beta。不把这一条写成「Cline 替代 Cursor」。",
-        "type_chips": [{"text": "工具", "class": "product"}]
+        "type_chips": [
+          {
+            "text": "工具",
+            "class": "product"
+          }
+        ]
       }
     },
     {
@@ -20,7 +409,12 @@
         "title": "Anthropic 公布自家 agent 如何限制爆炸半径",
         "desc": "安全向文章讲清楚：agent 能干什么、干不了什么、出轨后怎么收。同日还有开源权重被剔掉安全训练后上架出售的报道。",
         "detail": "这是安全机制说明，不是新模型发布。与「剔安全权重商品化」并列出现，只记官方写了什么，不推测市场结果。",
-        "type_chips": [{"text": "安全", "class": "safety"}]
+        "type_chips": [
+          {
+            "text": "安全",
+            "class": "safety"
+          }
+        ]
       }
     },
     {
@@ -31,7 +425,12 @@
         "title": "iOS 27 代码显示 Siri 可换 Claude 或 ChatGPT 作后端",
         "desc": "社区从 iOS 27 构建里读出 Siri 可切换 Claude / ChatGPT 作对话后端。苹果尚未发布说明。",
         "detail": "只记代码里看到的接口名，不当成已经上架。没有公开的价格、默认厂商或上线日期。",
-        "type_chips": [{"text": "平台", "class": "product"}]
+        "type_chips": [
+          {
+            "text": "平台",
+            "class": "product"
+          }
+        ]
       }
     },
     {
@@ -42,7 +441,12 @@
         "title": "GitHub Actions 接入编程 agent；开源权重被剔安全后上架出售",
         "desc": "两条并列：仓库里的编程 agent 走进 CI；另有商业服务把开源权重的安全对齐去掉再卖。",
         "detail": "前者是工作流变化，后者是安全边界变化。不把两条拼成「开源已死」。",
-        "type_chips": [{"text": "行业", "class": "industry"}]
+        "type_chips": [
+          {
+            "text": "行业",
+            "class": "industry"
+          }
+        ]
       }
     },
     {
@@ -53,7 +457,12 @@
         "title": "Antigravity 预览上下文从 128k 提到 1M",
         "desc": "Google 把两档 Antigravity preview 的上下文窗从 128k 提到 1M。",
         "detail": "只记窗口变化。不涉及定价、不涉及模型更名。",
-        "type_chips": [{"text": "窗口", "class": "model"}]
+        "type_chips": [
+          {
+            "text": "窗口",
+            "class": "model"
+          }
+        ]
       }
     },
     {
@@ -64,7 +473,12 @@
         "title": "Claude for Financial Advisors：对接 BlackRock / Schwab 等托管",
         "desc": "Anthropic 推出给投顾的 Claude 插件：研究、会议准备、组合分析、合规核对，带 BlackRock、Schwab、Addepar 等连接器。",
         "detail": "Enterprise / RIA 通道。这是行业插件，不是新基座模型。",
-        "type_chips": [{"text": "产品", "class": "product"}]
+        "type_chips": [
+          {
+            "text": "产品",
+            "class": "product"
+          }
+        ]
       }
     },
     {
@@ -75,7 +489,12 @@
         "title": "Anthropic Economic Index：约 100 万条对话映到 O*NET 任务",
         "desc": "首份报告：37.2% 查询落在计算机与数学类工作；增强 57%，替代 43%。",
         "detail": "样本是 Claude.ai Free / Pro 匿名对话。不把这组比例当成全行业结论。",
-        "type_chips": [{"text": "研究", "class": "research"}]
+        "type_chips": [
+          {
+            "text": "研究",
+            "class": "research"
+          }
+        ]
       }
     },
     {
@@ -86,7 +505,12 @@
         "title": "ElevenLabs MCP 接入语音 / 图像 / 视频生成",
         "desc": "MCP 连接器把语音、转写、配音、音乐、音效、图像、视频给到 Claude、ChatGPT、Cursor、Grok Bot 等客户端。",
         "detail": "OAuth，工作区管理员控制工具与数据属地。这是工具面向变化，不是新基座模型。",
-        "type_chips": [{"text": "工具", "class": "product"}]
+        "type_chips": [
+          {
+            "text": "工具",
+            "class": "product"
+          }
+        ]
       }
     },
     {
@@ -97,7 +521,12 @@
         "title": "Amodei 呼吁拓展实验室放慢；Altman、马斯克表态支持",
         "desc": "Anthropic CEO 说要 pace the frontier。OpenAI、xAI 主带回应支持这一句。同日马斯克仍在拆 Grok 4.8 / 5。",
         "detail": "记态度，不记成「三家已经停训」。没有公开的共同时间表。",
-        "type_chips": [{"text": "政策", "class": "industry"}]
+        "type_chips": [
+          {
+            "text": "政策",
+            "class": "industry"
+          }
+        ]
       }
     },
     {
@@ -108,7 +537,12 @@
         "title": "DeepSeek V4 Pro API 没有按原计切到 Flash",
         "desc": "9 月 10 日曾说要把 deepseek-v4-pro 别名切到 V4.1-Flash 费率。黑 14 日仍按 V4-Pro-0813 计费。",
         "detail": "只记计费与别名。不解读成新模型发布。",
-        "type_chips": [{"text": "API", "class": "model"}]
+        "type_chips": [
+          {
+            "text": "API",
+            "class": "model"
+          }
+        ]
       }
     },
     {
@@ -119,7 +553,12 @@
         "title": "马斯克拆 Grok 4.8 / 4.9 / 5：4.8 本周结束训练进 RL",
         "desc": "Grok 4.8 为 2.5T，新 C++ 训练栈，本周结束训练后进 RL。4.7 被评为大致对齐 Opus 5.0 而非 5.1；4.9 定位 Astra/Fable；问 AGI 则指向 Grok 5。",
         "detail": "来源是马斯克 9 月 14 日 X 回帖，xAI 官网当时没有同步发布说明。线上最新正式模型仍是 8 月 12 日的 Grok 4.6。",
-        "type_chips": [{"text": "路线", "class": "model"}]
+        "type_chips": [
+          {
+            "text": "路线",
+            "class": "model"
+          }
+        ]
       }
     },
     {
@@ -130,7 +569,12 @@
         "title": "Grok 4.7 超过 9/12 窗口，仍未发布",
         "desc": "截至 9 月 13 日，xAI 模型页与 API 发布说明里仍没有 Grok 4.7。",
         "detail": "社区侧写的原因是 RL 可能罚了回答长度。这是推测。",
-        "type_chips": [{"text": "延误", "class": "model"}]
+        "type_chips": [
+          {
+            "text": "延误",
+            "class": "model"
+          }
+        ]
       }
     },
     {
@@ -141,7 +585,12 @@
         "title": "Grok Bot 官方重置全体用量上限",
         "desc": "We've reset usage limits for all Grok Bot users。",
         "detail": "用量/代币重置，不是技能重置。",
-        "type_chips": [{"text": "额度", "class": "quota"}]
+        "type_chips": [
+          {
+            "text": "额度",
+            "class": "quota"
+          }
+        ]
       }
     },
     {
@@ -152,7 +601,12 @@
         "title": "马斯克再给全体 Grok / Bot 用户免费 token 重置",
         "desc": "another free reset on token usage。",
         "detail": "官方口径是 token usage 免费重置。",
-        "type_chips": [{"text": "额度", "class": "quota"}]
+        "type_chips": [
+          {
+            "text": "额度",
+            "class": "quota"
+          }
+        ]
       }
     }
   ]

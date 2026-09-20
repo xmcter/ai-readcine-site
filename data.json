@@ -1,6 +1,6 @@
 {
   "meta": {
-    "last_fetch": "2026-09-13",
+    "last_fetch": "2026-09-20",
     "refresh_freq": "每天 8:30（自动）",
     "vendor_count": "20",
     "line_count": "29",
@@ -65,6 +65,10 @@
     {
       "href": "#opencode",
       "label": "OpenCode"
+    },
+    {
+      "href": "#command_code",
+      "label": "Command Code"
     },
     {
       "href": "#tencent",
@@ -11607,6 +11611,174 @@
                   {
                     "text": "fix",
                     "class": "fix"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "command_code",
+        "logo_domain": "commandcode.ai",
+        "badge": "CC",
+        "name": "Command Code",
+        "sub_vendor": null,
+        "confidence": "官方 changelog",
+        "subgroups": [
+          {
+            "title": "Command Code",
+            "title_note": "CLI · Desktop · taste-1",
+            "link": "https://commandcode.ai/changelog",
+            "link_text": "commandcode.ai ↗",
+            "footnote": "已收录 5 条种子更新；后续由 update-data 抓取 changelog",
+            "columns": [
+              "更新日期",
+              "更新要点",
+              "分类"
+            ],
+            "rows": [
+              {
+                "when": "2026-09-19",
+                "title": "Command Code CLI v1.58.0 发布：LongCat 2.0 转为付费模型",
+                "desc": "v1.58.0: Command Code CLI 新版本将免费的 LongCat 2.0 层级退役，并作为付费模型出售。",
+                "detail": "Command Code CLI v1.58.0 宣布了一项重要的商业模式调整：原先免费的 LongCat 2.0 模型层级现已退役，并转变为付费模型。这意味着用户如需继续使用 LongCat 2.0 的能力，将需要购买相应的服务。此举可能旨在更好地平衡模型提供成本和盈利，并为未来模型的开发提供更多资源。",
+                "type_chips": [
+                  {
+                    "text": "breaking",
+                    "class": "breaking"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-19",
+                "title": "Command Code CLI v1.57.0 发布：macOS/Windows/Linux/WSL 支持粘贴剪贴板图像",
+                "desc": "v1.57.0: Command Code CLI 新版本支持在 macOS、Windows、Linux 和 WSL 上使用 `ctrl+v` 或 `alt+v` 粘贴剪贴板图像。",
+                "detail": "Command Code CLI v1.57.0 带来了跨平台粘贴剪贴板图像的功能，用户现在可以在 macOS、Windows、Linux 和 WSL 环境下，通过常用的 `ctrl+v` 或新增的 `alt+v` 快捷键，将剪贴板中的图像直接粘贴到应用中。这一功能极大地提升了用户在不同操作系统和子系统之间处理图像的便捷性，简化了工作流程。",
+                "type_chips": [
+                  {
+                    "text": "feature",
+                    "class": "feature"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-18",
+                "title": "Command Code CLI v1.56.1 发布：向 BYOK 主机发送会话 ID",
+                "desc": "v1.56.1: Command Code CLI 新版本支持向需要会话 ID 的 BYOK（Bring Your Own Key）主机发送会话 ID。",
+                "detail": "Command Code CLI v1.56.1 增加了对 BYOK（Bring Your Own Key）主机的支持，现在可以向那些需要会话 ID 来进行身份验证或上下文跟踪的主机发送当前的会话 ID。这一功能提高了与第三方服务的兼容性和集成度，确保了在 BYOK 模式下，API 请求能够正确识别和处理会话信息。",
+                "type_chips": [
+                  {
+                    "text": "feature",
+                    "class": "feature"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-18",
+                "title": "Command Code CLI v1.56.0 发布：新增 Qwen 3.8 Omni Flash 模型",
+                "desc": "v1.56.0: Command Code CLI 新版本增加了对 Qwen 3.8 Omni Flash 模型的支持。",
+                "detail": "Command Code CLI v1.56.0 集成了 Qwen 3.8 Omni Flash 模型。这一更新为用户提供了更多高性能的 AI 模型选择，Qwen 3.8 Omni Flash 可能具备更快的推理速度和更强的泛化能力，从而提升代码生成、理解和辅助编程的效率和质量。",
+                "type_chips": [
+                  {
+                    "text": "feature",
+                    "class": "feature"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-18",
+                "title": "Command Code CLI v1.55.1 发布：修复桌面遥测报告和聊天遥测问题",
+                "desc": "v1.55.1: Command Code CLI 新版本修复了桌面遥测报告自身服务的问题，并确保每个聊天遥测在独立的跟踪中。",
+                "detail": "Command Code CLI v1.55.1 解决了遥测报告方面的两个主要 Bug。首先，它修复了桌面应用程序将自己的遥测数据报告到自身服务的问题，这可能导致数据冗余或分析偏差。其次，确保了每个聊天会话的遥测数据都在其独立的跟踪中进行，从而避免了多个聊天同时运行时活动混淆的问题，使得数据分析更加准确和清晰。",
+                "type_chips": [
+                  {
+                    "text": "fix",
+                    "class": "fix"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-18",
+                "title": "Command Code Desktop v0.1.33 发布：新增 Qwen 3.8 Omni Flash 模型",
+                "desc": "v0.1.33: Command Code Desktop 新版本在模型选择器中新增了 Qwen 3.8 Omni Flash 模型，并支持图像输入。",
+                "detail": "Command Code Desktop v0.1.33 引入了新的 Qwen 3.8 Omni Flash 模型，并将其添加到模型选择器中。此模型不仅提供先进的语言处理能力，还支持图像输入，这意味着用户可以向 AI 提供图像作为上下文，从而实现更丰富的多模态交互和应用场景，例如图像理解、视觉问答等。",
+                "type_chips": [
+                  {
+                    "text": "feature",
+                    "class": "feature"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-17",
+                "title": "Command Code Desktop v0.1.31 发布：修复上下文环与模型切换问题",
+                "desc": "v0.1.31: Command Code Desktop 新版本修复了恢复聊天的上下文环（context ring）计算问题，确保其根据自身模型的窗口进行测量。同时，优化了空闲聊天模型更改时上下文环的更新机制。",
+                "detail": "Command Code Desktop v0.1.31 解决了与上下文环（context ring）相关的两个 Bug。首先，它修复了恢复聊天时上下文环的计算逻辑，确保其根据当前聊天的模型上下文窗口大小来准确显示，避免了例如 DeepSeek 聊天显示为实际容量五倍的错误。其次，改进了当空闲聊天的模型发生变化时，上下文环的更新机制，现在它会在模型更改后立即更新，而不是等到下次交互。这些修复提升了上下文信息的准确性和及时性。",
+                "type_chips": [
+                  {
+                    "text": "fix",
+                    "class": "fix"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-17",
+                "title": "Command Code CLI v1.55.0 发布：新增 /loop 命令与 OpenAI Responses 端点",
+                "desc": "v1.55.0: Command Code CLI 新版本新增 `/loop` 命令，支持按固定或自定进度重复运行任务。同时，提供商 API 和 BYOK CLI Wire 上新增 OpenAI Responses 端点。",
+                "detail": "Command Code CLI v1.55.0 引入了两个主要新功能。首先，新增了 `/loop` 命令，允许用户立即运行一个任务，并按固定时间表或自定进度重复执行，从而实现了任务的自动化和持续运行。其次，在提供商 API 和 BYOK（Bring Your Own Key）CLI Wire 上新增了 OpenAI Responses 端点，这为开发者提供了通过 API 访问 OpenAI Responses 功能的途径，增强了 Command Code 与 OpenAI 服务的集成能力。",
+                "type_chips": [
+                  {
+                    "text": "feature",
+                    "class": "feature"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-16",
+                "title": "Command Code CLI v1.54.2 发布：修复上下文压缩中的孤立工具结果问题",
+                "desc": "v1.54.2: Command Code CLI 新版本修复了上下文压缩中的一个边缘情况，避免了图像相关的孤立 `tool_results`。",
+                "detail": "Command Code CLI v1.54.2 解决了上下文压缩过程中可能出现的边缘问题，特别是关于图像相关的孤立 `tool_results`（工具结果）。通过此次修复，系统能够更可靠地处理上下文中的工具调用结果，避免在压缩历史时丢失或错误关联图像数据，从而提升了对话连续性和数据完整性。",
+                "type_chips": [
+                  {
+                    "text": "fix",
+                    "class": "fix"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-16",
+                "title": "Command Code CLI v1.54.1 发布：优化 /model 选择器和会话写入",
+                "desc": "v1.54.1: Command Code CLI 新版本修复了打印模式退出前排队的会话写入问题，并改进了窄终端上的 `/model` 选择器。",
+                "detail": "Command Code CLI v1.54.1 带来了两项重要的修复和优化。首先，它解决了在打印模式退出之前，未能及时刷新排队的会话写入操作的问题，确保数据的一致性。其次，改进了在窄终端环境下 `/model` 选择器的显示和交互体验，使其在有限的屏幕空间内更具可用性。这些改进提升了 CLI 的稳定性和在不同环境下的用户体验。",
+                "type_chips": [
+                  {
+                    "text": "fix",
+                    "class": "fix"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-13",
+                "title": "Command Code CLI v1.54.0 发布：首次支持 herdr",
+                "desc": "v1.54.0: Command Code CLI 新版本获得了对 herdr 的第一类支持。",
+                "detail": "Command Code CLI v1.54.0 版本首次提供了对 herdr 的第一类支持。Herdr 是一个专注于分布式 AI Agent 协作的框架，此次集成意味着 Command Code CLI 现在能够更好地与 herdr 生态系统进行交互，为开发者在构建和管理分布式 Agent 任务时提供更强大的工具和更流畅的体验。",
+                "type_chips": [
+                  {
+                    "text": "feature",
+                    "class": "feature"
+                  }
+                ]
+              },
+              {
+                "when": "2026-09-12",
+                "title": "Command Code CLI v1.53.1 发布：配置默认压缩模型与 BYOK 推理",
+                "desc": "v1.53.1: Command Code CLI 新版本将 `/config` 中默认的压缩模型设置为 DeepSeek V4.1 Flash。同时，改进了 BYOK（Bring Your Own Key）推理的努力度控制。",
+                "detail": "Command Code CLI v1.53.1 带来了配置和推理优化。此版本将 `/config` 中的默认会话压缩模型设置为 DeepSeek V4.1 Flash，这有助于在不牺牲过多信息量的情况下，提高长对话的处理效率和成本效益。此外，BYOK（Bring Your Own Key）推理的努力度（reasoning effort）控制得到了改进，使得用户在自带 API 密钥的情况下，能够更精细地调整模型在推理过程中的“思考”程度，从而更好地平衡响应速度和结果质量。",
+                "type_chips": [
+                  {
+                    "text": "feature",
+                    "class": "feature"
                   }
                 ]
               }

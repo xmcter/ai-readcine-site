@@ -82,7 +82,7 @@ function bindAudienceBar() {
 }
 
 // 「自定义订阅」面板里的置顶顺序
-const PANEL_ORDER = ['xai', 'industry', 'openai', 'google', 'cursor', 'anthropic', 'leaderboards', 'opensource_agents'];
+const PANEL_ORDER = ['xai', 'industry', 'openai', 'google', 'cursor', 'anthropic', 'leaderboards', 'opensource_agents', 'opencode', 'command_code'];
 // 首屏默认只点亮站长日常在用的产品线（按产品线精确勾选，不整组面板全选）
 const DEFAULT_SUBSCRIBED_LINES = [
   ['xai', 'Grok CLI'],
@@ -90,13 +90,14 @@ const DEFAULT_SUBSCRIBED_LINES = [
   ['openai', 'ChatGPT'],
   ['google', 'Antigravity 2.0'], // 桌面 GUI Agent，不是 IDE
   ['industry', 'AI 行业要闻'],
+  ['command_code', 'Command Code'],
 ];
 // 曾经默认勾过、现已撤下的产品线（升版本时从订阅里摘掉一次）
 const REMOVED_DEFAULT_LINES = [
   ['google', 'Antigravity CLI'],
   ['google', 'Antigravity IDE'],
 ];
-const DEFAULTS_VERSION = '4';
+const DEFAULTS_VERSION = '5';
 
 function esc(s) {
   if (s === null || s === undefined) return '';
